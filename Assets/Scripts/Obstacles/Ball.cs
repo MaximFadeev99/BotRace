@@ -21,14 +21,14 @@ public class Ball : Obstacle
         _currentScale = _transform.localScale;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter()
     {
         TouchedGround?.Invoke();
         _transform.DOScale(_pinnedDownScale, 0.1f);
         //_transform.localScale = _pinnedDownScale;
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit()
     {
         _transform.DOScale(_currentScale, 0.3f);
         //_transform.localScale = new Vector3 (0.8f, 0.8f, 0.8f);

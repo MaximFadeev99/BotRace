@@ -6,11 +6,12 @@ using UnityEngine.Timeline;
 [System.Serializable]
 public class BotDriver 
 {
-    //добавить ошибки в логику Бота, чтобы контролировать сложность 
     private float _speedRotation = 0.2f;
 
-    private Transform _controlPoint;
-    private LayerMask _layerMask = 768;
+    private ControlPointManager _controlPointManager;
+    private ControlPoint _controlPoint;
+    private Transform _controlPointTransform;
+    private LayerMask _layerMask = 2560; //2560
     private Transform _veichleTransform;
     private Renderer _renderer;
     private Transform _boxcastPoint;
@@ -25,21 +26,21 @@ public class BotDriver
     private RaycastHit _newObstacle;
     private RaycastHit _currentObstacle;
 
-    public BotDriver(Transform veichleTransform, Renderer renderer, Transform controlPoint, Transform raycastPoint)
+    public BotDriver(Transform veichleTransform, Renderer renderer, ControlPointManager controlPointManager, Transform raycastPoint)
     {
         _veichleTransform = veichleTransform;
         _renderer = renderer;
-        _controlPoint = controlPoint;
+        _controlPointManager = controlPointManager;
         _boxcastPoint = raycastPoint;
         _boxcastSize = new Vector3(_renderer.bounds.extents.x, 2f, 0f);
-
+        _controlPoint = _controlPointManager.GetFirstControlPoint();
+        _controlPointTransform = _controlPoint.transform;
     }
 
     public float GetDirection() 
     {
-        bool isObstacleSpotted;
-
-        //убрать dotResult после отладки
+        //TryChangeControlPoint();
+        Debug.Log(_controlPoint.gameObject.name);
 
         if (_isManeuvering == false) 
         {
@@ -47,8 +48,8 @@ public class BotDriver
             _boxcastOrientation = _veichleTransform.rotation;
         }
 
-        isObstacleSpotted = Physics.BoxCast(_boxcastPoint.position, _boxcastSize, _boxcastDirection, out _newObstacle,
-            _boxcastOrientation, 200f, _layerMask, QueryTriggerInteraction.Collide);
+        bool isObstacleSpotted = Physics.BoxCast(_boxcastPoint.position, _boxcastSize, _boxcastDirection, out _newObstacle,
+            _boxcastOrientation, 150f, _layerMask, QueryTriggerInteraction.Collide);
         //Debug.Log(isObstacleSpotted);
 
         if (isObstacleSpotted == false)
@@ -64,7 +65,7 @@ public class BotDriver
                 _currentObstacle = _newObstacle;
                 Renderer renderer = _currentObstacle.collider.GetComponent<Renderer>();
 
-                if (renderer.bounds.center.x > _controlPoint.position.x)
+                if (renderer.bounds.center.x > _controlPointTransform.position.x)
                 {
                     _maneuverSide = -1f;
                 }
@@ -74,26 +75,35 @@ public class BotDriver
                 }              
             }
 
-            Debug.Log("Avoiding an obstacle");
+            //Debug.Log("Avoiding an obstacle");
             return CalculateGradualInput(_maneuverSide);
 
         }
 
-        
-        
+        float dotResult = Vector3.Dot(_veichleTransform.forward, _controlPointTransform.forward);
+        Debug.Log(dotResult);
 
-        if (Vector3.Dot(_controlPoint.forward, _veichleTransform.forward) < 0.995f && _isManeuvering == false) 
+        if (dotResult < 0.995f && _isManeuvering == false) 
         {
-            //Debug.Log(dotResult);
-            _correctionAngle = Vector3.SignedAngle(_veichleTransform.forward, _controlPoint.forward, Vector3.up);
+            
+            _correctionAngle = Vector3.SignedAngle(_veichleTransform.forward, _controlPointTransform.forward, Vector3.up);
             //Debug.Log(_correctionAngle);
-            Debug.Log("Aligning with control point's forward");
+            //Debug.Log("Aligning with control point's forward");
             return CalculateGradualInput(_correctionAngle);
         }
 
-        Debug.Log("I am going straight right");
+        //Debug.Log("I am going straight right");
         return CalculateGradualInput();
     }
+
+    //private void TryChangeControlPoint() 
+    //{
+    //    if (_veichleTransform.position.z >= _controlPointTransform.position.z) 
+    //    {
+    //        _controlPoint = _controlPointManager.GiveNextPoint(_controlPoint);
+    //        _controlPointTransform = _controlPoint.transform;
+    //    }
+    //}
 
     private float CalculateGradualInput(float correctionAngle = 0f) 
     {
@@ -114,6 +124,12 @@ public class BotDriver
 
         _currentInput = Mathf.MoveTowards(_currentInput, maxInput, _speedRotation);
         return _currentInput;
+    }
+
+    public void SetControlPoint(ControlPoint newControlPoint) 
+    {
+        _controlPoint = newControlPoint;
+        _controlPointTransform = _controlPoint.transform;
     }
 
     //public void OnDrawGizmos()

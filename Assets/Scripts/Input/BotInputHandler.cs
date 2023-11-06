@@ -5,23 +5,24 @@ using UnityEngine;
 public class BotInputHandler : MonoBehaviour, IInputHandler
 {
     private BotDriver _botDriver;
-    [SerializeField] private Transform _controlPoint;
+    [SerializeField] private ControlPointManager _controlPointManager;
+    [SerializeField] private Transform _raycastPoint;
     //[SerializeField] private LayerMask _layerMask;
 
-    private Transform _veichleTransform;
-    private Transform _raycastPoint;
+    private Transform _veichleTransform;   
     private Renderer _renderer;
     private float _directionInput;
     private bool _isRightTurnBlock = false;
     private bool _isLeftTurnBlock = false;
+
+    public BotDriver BotDriver => _botDriver;
 
     private void Awake()
     {
         _veichleTransform = transform;
         _renderer = GetComponent<Renderer>();
         //_botDriver = GetComponent<BotDriver>();
-        _raycastPoint = _veichleTransform.Find("RaycastPoint").transform;
-        _botDriver = new(_veichleTransform, _renderer, _controlPoint, _raycastPoint);
+        _botDriver = new(_veichleTransform, _renderer, _controlPointManager, _raycastPoint);
         //_layerMask = 0;
     }
 

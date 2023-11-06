@@ -6,30 +6,43 @@ using DG.Tweening;
 
 public class CollisionHandler
 {
+    private Hover _hover;
+    private Engine _engine;
     private Transform _veichleTransform;
     private IInputHandler _inputHandler;
 
-    public CollisionHandler (Transform veichleTransform, IInputHandler inputHandler) 
+
+    public CollisionHandler (Hover hover) 
     {
-        _veichleTransform = veichleTransform;
-        _inputHandler = inputHandler;
+        _hover = hover;
+        _veichleTransform = _hover.Transform;
+        _inputHandler = _hover.InputHandler;
+        _engine = _hover.Engine;
     }
 
     public void AnalyzeCollision(Collider other) 
     {
-        if (other.TryGetComponent(out RightTrackBarrier _))  
-            //поскольку сделал через SignedAngle деление на левый и правый барьер нужно убрать 
+        if (other.TryGetComponent(out RightTrackBarrier _))
         {
             _inputHandler.BlockRightTurn();
             CorrectTrajectory(true);
-            return;
         }
-
-        if (other.TryGetComponent(out LeftTrackBarrier _))
+        else if (other.TryGetComponent(out LeftTrackBarrier _)) 
         {
             _inputHandler.BlockLeftTurn();
             CorrectTrajectory(false);
-            return;
+        }
+        else if (other.TryGetComponent(out SpeedBonus _)) 
+        {
+            _engine.ActivateSpeedBoost();
+        }
+        else if (other.TryGetComponent(out InvincibilityBonus _)) 
+        {
+            _hover.ActivateInvincibility();
+        }
+        else if (other.TryGetComponent(out Obstacle _) && _hover.IsInvincible == false) 
+        {
+            _engine.ApplySpeedPenalty();
         }
     }
 
@@ -45,9 +58,6 @@ public class CollisionHandler
         float correctionAngle;
 
         Physics.Raycast(_veichleTransform.position, Vector3.down, out RaycastHit track, raycastDistance);
-        //correctionAngle = Vector3.Angle(_veichleTransform.forward, track.transform.forward);
-        ////попробовать высчитать correctionAngle через Vector3.SignedAngle
-        //correctionAngle = isCollisionOnRight ? -correctionAngle : correctionAngle;
         correctionAngle = CalculateCorrectionAngle(track, isCollidingOnRight);
         _veichleTransform.DORotate(new Vector3(_veichleTransform.rotation.eulerAngles.x, 
             _veichleTransform.rotation.eulerAngles.y + correctionAngle,
