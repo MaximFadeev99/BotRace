@@ -711,9 +711,17 @@
       <Project>{16C97F29-C5A3-893A-80D7-5B01748ECBFF}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{3FABBB87-9CA9-48BC-C2C0-1356B0B90461}</Project>
+      <Name>Unity.Recorder.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{0EB241D1-5BD1-EDC2-41DD-AB6330950C92}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Base.csproj">
+      <Project>{B20A6A79-A6C1-77B0-A754-0ABC7398A04C}</Project>
+      <Name>Unity.Recorder.Base</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{EE3B9E76-4260-1C41-0E32-8F372DE04B07}</Project>
@@ -822,6 +830,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{C9C185A0-2A55-B345-1568-1A58B306995F}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{CC4E633B-019A-D614-B880-FE41944D2EA0}</Project>
+      <Name>Unity.Recorder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

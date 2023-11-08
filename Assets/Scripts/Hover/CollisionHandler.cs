@@ -12,6 +12,8 @@ public class CollisionHandler
     private IInputHandler _inputHandler;
 
 
+    //при столкновении справа с барьерм на объекте LeftTurn(1) ховер игрока выходит за карту, недостаточный разворот
+
     public CollisionHandler (Hover hover) 
     {
         _hover = hover;

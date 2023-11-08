@@ -59,39 +59,83 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Track\ControlPoint.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\BasicController.cs" />
+    <Compile Include="Assets\Scripts\UI\Results\ContentFiller.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Press.cs" />
+    <Compile Include="Assets\Scripts\Race\FinishLine.cs" />
     <Compile Include="Assets\Scripts\Hover\Hover.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\IInputHandler.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverGrid.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\TabletScaler.cs" />
+    <Compile Include="Assets\GUI Kit Casual Game\Scripts\Panel.cs" />
     <Compile Include="Assets\Scripts\Track\RightTrackBarrier.cs" />
     <Compile Include="Assets\Scripts\Obstacles\JumpingBalls.cs" />
-    <Compile Include="Assets\Scripts\Hover\TransformDirectionChanger.cs" />
+    <Compile Include="Assets\Scripts\Race\ControlPointManager.cs" />
+    <Compile Include="Assets\Scripts\Hover\DirectionChanger.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverMovement.cs" />
-    <Compile Include="Assets\Scripts\Hover\TransformLevitator.cs" />
+    <Compile Include="Assets\Saurabh_Studio\Ex Scene\CreateObj.cs" />
+    <Compile Include="Assets\Scripts\UI\Results\ResultLine.cs" />
+    <Compile Include="Assets\Scripts\Hover\Levitator.cs" />
     <Compile Include="Assets\Scripts\Input\UserInputHandler.cs" />
     <Compile Include="Assets\Scripts\Hover\CollisionHandler.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverLook.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\ILevitator.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Utilities\Timer.cs" />
+    <Compile Include="Assets\Scripts\Race\RaceTimer.cs" />
+    <Compile Include="Assets\Scripts\Race\RaceManager.cs" />
+    <Compile Include="Assets\Scripts\Race\ScoreCalculator.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverPoint.cs" />
+    <Compile Include="Assets\Scripts\UI\TurnButtons\TurnButton.cs" />
+    <Compile Include="Assets\GUI Kit Casual Game\Scripts\PanelControl.cs" />
     <Compile Include="Assets\Scripts\Input\BotDriver.cs" />
     <Compile Include="Assets\Scripts\Track\RightTurn.cs" />
     <Compile Include="Assets\Scripts\Track\LeftTurn.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Ball.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Hammers.cs" />
-    <Compile Include="Assets\Scripts\Hover\TransformMover.cs" />
+    <Compile Include="Assets\Scripts\Hover\Mover.cs" />
     <Compile Include="Assets\Scripts\Hover\Engine.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\InvincibilityBonus.cs" />
+    <Compile Include="Assets\GUI Kit Casual Game\Extensions\UIParticle\UIParticleSystem.cs" />
     <Compile Include="Assets\Scripts\Track\LeftTrackBarrier.cs" />
+    <Compile Include="Assets\Scripts\UI\TurnButtons\LeftTurnButton.cs" />
     <Compile Include="Assets\Scripts\Input\BotInputHandler.cs" />
     <Compile Include="Assets\Scripts\Track\Straight.cs" />
     <Compile Include="Assets\Scripts\CameraMover.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\SpeedBonus.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\IDirectionChanger.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\IMover.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Bonus.cs" />
+    <Compile Include="Assets\Scripts\UI\TurnButtons\RightTurnButton.cs" />
     <Compile Include="Assets\Scripts\Obstacles\SwordArch.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu\PauseMenuManager.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu\ConfirmationWindow.cs" />
+    <Compile Include="Assets\Scripts\UI\StartScreenUI\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Results\ResultsMenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\EZ Hover Studios\EZ Hover\Demo\Textures\README.txt" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\UIParticle\hidden particle.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\GUI Kit Casual Game\ResourcesData\Shader &amp; Materials\UIAdditive.shader" />
     <None Include="Assets\BEDRILL\Modular_Track_Free\Readme.txt" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\GUI Kit Casual Game\ResourcesData\Shader &amp; Materials\MobileAdditive.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -673,6 +717,10 @@
       <Project>{8919F06D-F2FA-C20C-C8FC-0CB1C878C283}</Project>
       <Name>Assembly-CSharp-firstpass.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Base.Player.csproj">
+      <Project>{5B7232C4-DE43-5B86-744F-4E6A0F73D0D3}</Project>
+      <Name>Unity.Recorder.Base.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{0DF30EDC-7603-C01E-CA4D-27EBB2E4044F}</Project>
       <Name>Unity.Timeline.Player</Name>
@@ -704,6 +752,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{B36D9865-F50B-267D-1E46-6F56239DF6BF}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Player.csproj">
+      <Project>{CD015A22-FB90-DD1D-EAF3-420EA1A060FD}</Project>
+      <Name>Unity.Recorder.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

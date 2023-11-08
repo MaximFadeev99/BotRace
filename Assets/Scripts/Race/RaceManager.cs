@@ -15,6 +15,7 @@ public class RaceManager : MonoBehaviour
     [SerializeField] private List<Hover> _participants;
     [SerializeField] private FinishLine _finishLine;
     [SerializeField] private TextMeshProUGUI _screenTimer;
+    [SerializeField] private TextMeshProUGUI _startCountDownField;
 
     //[SerializeField] private LayerMask _layerMask;
 
@@ -49,10 +50,7 @@ public class RaceManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (Hover participant in _participants) 
-            participant.StartRacing();
-
-        _raceTimer.Activate();
+        StartCoroutine(StartCountDown());
     }
 
     private void Update()
@@ -63,13 +61,13 @@ public class RaceManager : MonoBehaviour
     private void OnFinishLineCrossed(Hover hover) 
     {
         float score = _scoreCalculator.CalculateScore(_raceTimer.CurrentTime, _vacantRow + 1);
-        _results[_vacantRow, 0] = _vacantRow + 1.ToString();
+        _results[_vacantRow, 0] = (_vacantRow + 1).ToString();
         _results[_vacantRow, 1] = hover.gameObject.name;
         _results[_vacantRow, 2] = _raceTimer.CurrentOutputTime;
         _results[_vacantRow, 3] = Mathf.RoundToInt(score).ToString();
         _vacantRow++;
 
-        if (hover.TryGetComponent(out UserInputHandler _))
+        if (hover.gameObject.TryGetComponent(out UserInputHandler _))
             FinishRace();
     }
 
@@ -80,5 +78,26 @@ public class RaceManager : MonoBehaviour
         _resultsMenu.SetActive(true);
         _contentFiller.DrawResults(_results);
         Time.timeScale = 0f;
+    }
+
+    private IEnumerator StartCountDown() 
+    {
+        var waitTime = new WaitForSeconds(0.8f);
+        Time.timeScale = 1f;
+        _startCountDownField.gameObject.SetActive(true);
+        _startCountDownField.text = "3";
+        yield return waitTime;
+        _startCountDownField.text = "2";
+        yield return waitTime;
+        _startCountDownField.text = "1";
+        yield return waitTime;
+        _startCountDownField.text = "GO!";
+
+        foreach (Hover participant in _participants)
+            participant.StartRacing();
+
+        _raceTimer.Activate();
+        yield return waitTime;
+        _startCountDownField.gameObject.SetActive(false);
     }
 }

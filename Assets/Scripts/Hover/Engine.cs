@@ -49,9 +49,9 @@ public class Engine : MonoBehaviour
                 timer.Tick();
         }
         
-        _currentDirectionInput = _inputHandler.InquireInput();
+        _currentDirectionInput = _inputHandler.InquireInput(); //сделать так, чтобы код выполнялся только если  _isMovingForward
 
-        if (_currentDirectionInput != 0)
+        if (_currentDirectionInput != 0)  //попробовать объединить в одну связку со строками 63 и 64
             _directionChanger.ChangeDirection(_currentDirectionInput);
 
         if (_isMovingForward) 
@@ -60,7 +60,7 @@ public class Engine : MonoBehaviour
             _mover.PushForward();        
         }
 
-        if (_previousYRotation == _veichleTransform.rotation.eulerAngles.y)
+        if (_previousYRotation == _veichleTransform.rotation.eulerAngles.y) //попробовать заменить на  if (_currentDirectionInput == 0)
             _directionChanger.ResetZRotation();
     }
 

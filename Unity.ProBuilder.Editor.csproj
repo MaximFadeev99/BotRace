@@ -66,8 +66,8 @@
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\MenuActions\Selection\SelectEdgeRing.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\ProBuilderEditorShortcuts.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\ProBuilderMeshPreview.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\EditorShapeUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\ProbuilderScaleTool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\EditorShapeUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\MeshDebugTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\MenuActions\Selection\SelectLoop.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@5.1.1\Editor\EditorCore\PreferencesUpdater.cs" />

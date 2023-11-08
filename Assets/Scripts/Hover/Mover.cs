@@ -39,6 +39,7 @@ public class Mover : IMover
             _correctedPosition = new Vector3(_correctedPosition.x, _initialYPosition, _correctedPosition.z);
 
         _transform.DOMove(_correctedPosition + (_currentSpeed * Time.deltaTime * _transform.forward), Time.deltaTime);
+        //Скорее всего, дергания появляются здесь, нужно попробовать еще раз сделать без использования DOTween
     }
 
     private void AdjustForwardRotation()

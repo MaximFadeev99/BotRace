@@ -40,7 +40,7 @@ public class BotDriver
     public float GetDirection() 
     {
         //TryChangeControlPoint();
-        Debug.Log(_controlPoint.gameObject.name);
+        //Debug.Log(_controlPoint.gameObject.name);
 
         if (_isManeuvering == false) 
         {
@@ -81,7 +81,7 @@ public class BotDriver
         }
 
         float dotResult = Vector3.Dot(_veichleTransform.forward, _controlPointTransform.forward);
-        Debug.Log(dotResult);
+        //Debug.Log(dotResult);
 
         if (dotResult < 0.995f && _isManeuvering == false) 
         {

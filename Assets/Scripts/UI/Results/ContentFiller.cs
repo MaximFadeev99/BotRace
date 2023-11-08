@@ -21,7 +21,7 @@ public class ContentFiller : MonoBehaviour
         int rowsCount = results.GetLength(0);
         int columnsCount = results.GetLength(1);
 
-        if (columnsCount != ColumnCount)
+        if (columnsCount != ColumnCount) //убрать так, как массив всегда передастся с нужным числом колонок
             throw new ArgumentOutOfRangeException(nameof(columnsCount), 
                 $"The size of a source array for drawing results must consist of {ColumnCount} columns");
 
@@ -32,7 +32,6 @@ public class ContentFiller : MonoBehaviour
             string name = results[i, 1];
             string time = results[i, 2];
             string score = results[i, 3];
-
             newResult.Render(_places[place], name, time, score);
         }
     }
