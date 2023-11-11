@@ -6,6 +6,7 @@ using System;
 
 public class Hover : MonoBehaviour
 {
+    [SerializeField] private AudioSource _collisionAudioSource;
     [SerializeField] private float _invincibilityTime;
 
     private CollisionHandler _collisionHandler;
@@ -61,8 +62,16 @@ public class Hover : MonoBehaviour
         _invincibilityTimer.TimeIsUp += DeactivateInvincibility;
     }
 
-    public void StartRacing() 
+    public void StartRacing()
     {
         Engine.StartMovement();
     }
+
+    public void PlayCollisionSound() 
+    {
+        if (_collisionAudioSource != null) 
+        {
+            _collisionAudioSource.Play();      
+        }  
+    } 
 }

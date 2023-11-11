@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Agava.YandexGames;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button _settingsButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private GameObject _settingsMenu;
+
+    //private void Awake()  //раскомментировать перед сборкой, выдает ошибку при тестированиии в редакторе
+    //{
+    //    YandexGamesSdk.GameReady();
+    //}
 
     private void OnEnable()
     {

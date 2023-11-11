@@ -44,6 +44,7 @@ public class CollisionHandler
         }
         else if (other.TryGetComponent(out Obstacle _) && _hover.IsInvincible == false) 
         {
+            _hover.PlayCollisionSound();
             _engine.ApplySpeedPenalty();
         }
     }

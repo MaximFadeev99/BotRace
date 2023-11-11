@@ -9,6 +9,7 @@ public class Engine : MonoBehaviour
     [SerializeField] private Levitator _levitator;
     [SerializeField] private Mover _mover;
     [SerializeField] private DirectionChanger _directionChanger;
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private bool _isMovingForward = false;
     [SerializeField] private float _speedBoostRate;
     [SerializeField] private float _speedBoostTime;
@@ -56,7 +57,7 @@ public class Engine : MonoBehaviour
 
         if (_isMovingForward) 
         {
-            _levitator.StopLevitation(); //убрать !!!
+            //_levitator.StopLevitation();
             _mover.PushForward();        
         }
 
@@ -73,6 +74,9 @@ public class Engine : MonoBehaviour
     {
         _levitator.StopLevitation();
         _isMovingForward = true;
+
+        if (_audioSource != null)
+            _audioSource.Play();
     }
 
     public void ResetDirection(float correctionAngle) 

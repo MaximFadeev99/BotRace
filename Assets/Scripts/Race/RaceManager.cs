@@ -1,9 +1,9 @@
+using Agava.YandexGames;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RaceManager : MonoBehaviour
 {
@@ -14,8 +14,9 @@ public class RaceManager : MonoBehaviour
     [SerializeField] private float _trackAverageTime;
     [SerializeField] private List<Hover> _participants;
     [SerializeField] private FinishLine _finishLine;
+    [SerializeField] private Leaderboard _leaderboard;
+    [SerializeField] private CountDownHandler _countDownHandler;
     [SerializeField] private TextMeshProUGUI _screenTimer;
-    [SerializeField] private TextMeshProUGUI _startCountDownField;
 
     //[SerializeField] private LayerMask _layerMask;
 
@@ -50,7 +51,8 @@ public class RaceManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(StartCountDown());
+        _countDownHandler.StartRace(_participants, _raceTimer);
+        //_raceTimer.Activate();
     }
 
     private void Update()
@@ -65,10 +67,14 @@ public class RaceManager : MonoBehaviour
         _results[_vacantRow, 1] = hover.gameObject.name;
         _results[_vacantRow, 2] = _raceTimer.CurrentOutputTime;
         _results[_vacantRow, 3] = Mathf.RoundToInt(score).ToString();
-        _vacantRow++;
 
-        if (hover.gameObject.TryGetComponent(out UserInputHandler _))
+        if (hover.gameObject.TryGetComponent(out UserInputHandler _)) 
+        {
+            _leaderboard.SetPlayerScore(_results[_vacantRow, 3]);
             FinishRace();
+        }
+
+        _vacantRow++;
     }
 
     private void FinishRace() 
@@ -78,26 +84,5 @@ public class RaceManager : MonoBehaviour
         _resultsMenu.SetActive(true);
         _contentFiller.DrawResults(_results);
         Time.timeScale = 0f;
-    }
-
-    private IEnumerator StartCountDown() 
-    {
-        var waitTime = new WaitForSeconds(0.8f);
-        Time.timeScale = 1f;
-        _startCountDownField.gameObject.SetActive(true);
-        _startCountDownField.text = "3";
-        yield return waitTime;
-        _startCountDownField.text = "2";
-        yield return waitTime;
-        _startCountDownField.text = "1";
-        yield return waitTime;
-        _startCountDownField.text = "GO!";
-
-        foreach (Hover participant in _participants)
-            participant.StartRacing();
-
-        _raceTimer.Activate();
-        yield return waitTime;
-        _startCountDownField.gameObject.SetActive(false);
-    }
+    }   
 }

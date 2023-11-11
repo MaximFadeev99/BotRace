@@ -7,6 +7,7 @@ public class Ball : Obstacle
     private Transform _transform;
     private Rigidbody _rigidbody;
     private ConstantForce _constantForce;
+    private AudioSource _audioSource;
     private Vector3 _pinnedDownScale = Vector3.one; 
 
     public Action TouchedGround;
@@ -18,6 +19,7 @@ public class Ball : Obstacle
         _transform = transform;
         _constantForce = GetComponent<ConstantForce>();
         _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
         _currentScale = _transform.localScale;
     }
 
@@ -25,6 +27,7 @@ public class Ball : Obstacle
     {
         TouchedGround?.Invoke();
         _transform.DOScale(_pinnedDownScale, 0.1f);
+        _audioSource.Play();
         //_transform.localScale = _pinnedDownScale;
     }
 

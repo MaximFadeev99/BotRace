@@ -9,10 +9,12 @@ public class Hammers : MonoBehaviour
     [SerializeField] private float _movementSpeed = 1f;
 
     private Animator _animator;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _animator.speed = _movementSpeed;
     }
 
@@ -30,6 +32,7 @@ public class Hammers : MonoBehaviour
             var animationEndTime = new WaitForSeconds(1f / _movementSpeed);
             yield return timeBetweenCharges;
             _animator.SetTrigger("isCharging");
+            _audioSource.Play();
             yield return holdTime;
             _animator.SetTrigger("isBouncingBack");
             yield return animationEndTime;

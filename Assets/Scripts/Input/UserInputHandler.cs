@@ -12,6 +12,7 @@ internal class UserInputHandler: MonoBehaviour, IInputHandler
     {
         //_directionInput = Input.GetAxis("Horizontal");
         _directionInput = GetInput();
+        Debug.Log(_directionInput);
 
         if (_isRightTurnBlock)
             _directionInput = Mathf.Clamp(_directionInput, -1f, 0f);
