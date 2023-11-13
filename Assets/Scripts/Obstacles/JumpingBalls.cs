@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpingBalls : MonoBehaviour
@@ -18,15 +16,11 @@ public class JumpingBalls : MonoBehaviour
         _transform.position = new Vector3(_transform.position.x, _initialHeight, _transform.position.z);
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() =>
         _ball1.TouchedGround += ReleaseSecondBall;
-    }
 
-    private void OnDisable()
-    {
+    private void OnDisable() =>
         _ball1.TouchedGround -= ReleaseSecondBall;
-    }
 
     private void Start()
     {

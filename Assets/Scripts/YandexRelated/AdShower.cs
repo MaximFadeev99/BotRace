@@ -3,10 +3,8 @@ using Agava.YandexGames;
 
 public static class AdShower
 {
-    public static void Show() 
-    {
+    public static void Show() =>
         VideoAd.Show(OnOpenCallBack, null, OnCloseCallBack);
-    }
 
     private static void OnOpenCallBack() 
     {

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
+    [SerializeField] private GameObject _finishFireworksHolder;
+    
     public Action<Hover> Crossed;
 
     private void OnTriggerEnter(Collider other)
@@ -10,4 +12,7 @@ public class FinishLine : MonoBehaviour
         if (other.TryGetComponent(out Hover hover))
             Crossed?.Invoke(hover);
     }
+
+    public void StartFireworks() =>
+       _finishFireworksHolder.gameObject.SetActive(true);
 }

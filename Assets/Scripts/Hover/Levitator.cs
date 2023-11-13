@@ -14,20 +14,16 @@ public class Levitator : ILevitator
     public void Initialize(Transform veichleTransform)
     {
         _veichleTransform = veichleTransform;
-        _veichleTransform.position = new Vector3(_veichleTransform.position.x, _initialAltitutde, _veichleTransform.position.z);
-        _idleLevitationTween = _veichleTransform.DOMoveY(_veichleTransform.position.y - _upDownLevitationRange, _upDownLevitationTime).
-            SetLoops(-1, LoopType.Yoyo);
-        _idleLevitationTween.Pause();
+        _veichleTransform.position = new Vector3
+            (_veichleTransform.position.x, _initialAltitutde, _veichleTransform.position.z);
+        _idleLevitationTween = _veichleTransform.DOMoveY
+            (_veichleTransform.position.y - _upDownLevitationRange, _upDownLevitationTime).SetLoops(-1, LoopType.Yoyo);
+        _idleLevitationTween.SetEase(Ease.Linear).Pause();
     }
 
-    public void StartLevitation() 
-    {
+    public void StartLevitation() =>
         _idleLevitationTween.Play();
-    }
-    
 
-    public void StopLevitation() 
-    {
+    public void StopLevitation() =>
         _idleLevitationTween.Pause();
-    }
 }

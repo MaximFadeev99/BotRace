@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2255881070858009332
 Transform:
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299296375640115944}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.45833927, z: 0, w: 0.8887774}
   m_LocalPosition: {x: -1.79, y: 0.85, z: -6.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 54.56, z: 0}
 --- !u!65 &3994700522460597979
 BoxCollider:
@@ -41,9 +41,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299296375640115944}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 6.6001515, y: 5.2597356, z: 2.3742092}
   m_Center: {x: -0.47581595, y: 2.1298652, z: 0.2511698}
 --- !u!114 &65219153672874473
@@ -74,7 +82,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7997201921168759475
 Transform:
@@ -83,13 +91,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407425459172427536}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.62592345, z: 0, w: 0.7798845}
   m_LocalPosition: {x: 0.62, y: 0.85, z: -12.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 77.5, z: 0}
 --- !u!65 &3970020119255374165
 BoxCollider:
@@ -99,9 +107,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407425459172427536}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 6.6001515, y: 5.2597356, z: 2.3742092}
   m_Center: {x: -0.47581595, y: 2.1298652, z: 0.2511698}
 --- !u!114 &3052669320017051914
@@ -135,7 +151,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &289384811996554561
 Transform:
@@ -144,6 +160,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103321815952064507}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
@@ -159,7 +176,6 @@ Transform:
   - {fileID: 7997201921168759475}
   - {fileID: 8283882672406198086}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3723283240102767332
 MeshFilter:
@@ -219,9 +235,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103321815952064507}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
@@ -5552,7 +5576,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8283882672406198086
 Transform:
@@ -5561,6 +5585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230365964579079308}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -5615,7 +5640,6 @@ Transform:
   - {fileID: 6105524995241785791}
   - {fileID: 2672787883472229832}
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3757663220270407845
 GameObject:
@@ -5633,7 +5657,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &394722181228692938
 Transform:
@@ -5642,13 +5666,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3757663220270407845}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.49621648, z: 0, w: 0.8681989}
   m_LocalPosition: {x: 7.82, y: 0.85, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 59.5, z: 0}
 --- !u!65 &3133545514901688171
 BoxCollider:
@@ -5658,9 +5682,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3757663220270407845}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 11.275472, y: 5.2597356, z: 2.3742092}
   m_Center: {x: 1.8618379, y: 2.1298652, z: 0.25116906}
 --- !u!114 &5031988238943181603
@@ -5691,7 +5723,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2312350279810790008
 Transform:
@@ -5700,13 +5732,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674396109627732920}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.25139362, z: 0, w: 0.9678849}
   m_LocalPosition: {x: -6.1, y: 0.85, z: -2.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 29.12, z: 0}
 --- !u!65 &508821310985531585
 BoxCollider:
@@ -5716,9 +5748,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674396109627732920}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 6.6001515, y: 5.2597356, z: 2.3742092}
   m_Center: {x: -0.47581595, y: 2.1298652, z: 0.2511698}
 --- !u!114 &8818900034250512831
@@ -5749,7 +5789,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2792770215582772882
 Transform:
@@ -5758,13 +5798,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6674901058085184936}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.08932887, z: 0, w: 0.99600226}
   m_LocalPosition: {x: -11.5, y: 0.85, z: 0.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 10.25, z: 0}
 --- !u!65 &2739035615269126542
 BoxCollider:
@@ -5774,9 +5814,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6674901058085184936}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 6.6001515, y: 5.2597356, z: 2.3742092}
   m_Center: {x: -0.47581595, y: 2.1298652, z: 0.2511698}
 --- !u!114 &6271818933955671288
@@ -5807,7 +5855,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7248669021093644229
 Transform:
@@ -5816,13 +5864,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7199805896779073681}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.2789073, z: 0, w: 0.9603181}
   m_LocalPosition: {x: -0.36, y: 0.85, z: 9.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 32.39, z: 0}
 --- !u!65 &5823589511411111527
 BoxCollider:
@@ -5832,9 +5880,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7199805896779073681}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 11.275472, y: 5.2597356, z: 2.3742092}
   m_Center: {x: 1.8618379, y: 2.1298652, z: 0.25116906}
 --- !u!114 &4834835997958618706
@@ -5865,7 +5921,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5227174128861566108
 Transform:
@@ -5874,13 +5930,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7900048213700739402}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.08932887, z: 0, w: 0.99600226}
   m_LocalPosition: {x: -11.18, y: 0.85, z: 13.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 10.25, z: 0}
 --- !u!65 &2705951081422431267
 BoxCollider:
@@ -5890,9 +5946,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7900048213700739402}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 11.275472, y: 5.2597356, z: 2.3742092}
   m_Center: {x: 1.8618379, y: 2.1298652, z: 0.25116906}
 --- !u!114 &5982021304138989892
@@ -5923,7 +5987,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5624547516056426793
 Transform:
@@ -5932,13 +5996,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8269566580143991675}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.65474087, z: 0, w: 0.7558535}
   m_LocalPosition: {x: 12.17, y: 0.85, z: -7.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289384811996554561}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 81.8, z: 0}
 --- !u!65 &3506766854464561120
 BoxCollider:
@@ -5948,9 +6012,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8269566580143991675}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 11.275472, y: 5.2597356, z: 2.3742092}
   m_Center: {x: 1.8618379, y: 2.1298652, z: 0.25116906}
 --- !u!114 &6225544941918325749
@@ -5970,6 +6042,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6032,7 +6105,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &83661731736512803 stripped
 Transform:
@@ -6044,6 +6128,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6106,7 +6191,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &83661731687092455 stripped
 Transform:
@@ -6118,6 +6214,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6180,7 +6277,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8331497135822616331 stripped
 Transform:
@@ -6192,6 +6300,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6254,7 +6363,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8331497135840473676 stripped
 Transform:
@@ -6266,6 +6386,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6328,7 +6449,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &83661731962864284 stripped
 Transform:
@@ -6340,6 +6472,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6402,7 +6535,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8331497135903368311 stripped
 Transform:
@@ -6414,6 +6558,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6476,7 +6621,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8331497136086528272 stripped
 Transform:
@@ -6488,6 +6644,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6550,7 +6707,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &83661731057783292 stripped
 Transform:
@@ -6562,6 +6730,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6624,7 +6793,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &83661730972682968 stripped
 Transform:
@@ -6636,6 +6816,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6698,7 +6879,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8331497136628876170 stripped
 Transform:
@@ -6710,6 +6902,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6772,7 +6965,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8865562905041402883 stripped
 Transform:
@@ -6784,6 +6988,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6846,7 +7051,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &685716766667740532 stripped
 Transform:
@@ -6858,6 +7074,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -6920,7 +7137,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8686779912122543946 stripped
 Transform:
@@ -6932,6 +7160,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -6994,7 +7223,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &1240948347406257222 stripped
 Transform:
@@ -7006,6 +7246,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7068,7 +7309,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &1253999339480391348 stripped
 Transform:
@@ -7080,6 +7332,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7142,7 +7395,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &7394437076869323739 stripped
 Transform:
@@ -7154,6 +7418,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7216,7 +7481,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &1499425550412895622 stripped
 Transform:
@@ -7228,6 +7504,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7290,7 +7567,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8042056657050284272 stripped
 Transform:
@@ -7302,6 +7590,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7364,7 +7653,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &8039753948322466104 stripped
 Transform:
@@ -7376,6 +7676,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7438,7 +7739,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &5956699558429900452 stripped
 Transform:
@@ -7450,6 +7762,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7512,7 +7825,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &2816539579551189118 stripped
 Transform:
@@ -7524,6 +7848,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7586,7 +7911,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &6127690592699568251 stripped
 Transform:
@@ -7598,6 +7934,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7660,7 +7997,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &6121086616151339650 stripped
 Transform:
@@ -7672,6 +8020,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7734,7 +8083,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &3115942889285465568 stripped
 Transform:
@@ -7746,6 +8106,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -7808,7 +8169,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &4826958444667242308 stripped
 Transform:
@@ -7820,6 +8192,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7882,7 +8255,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &3505119523817780016 stripped
 Transform:
@@ -7894,6 +8278,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -7956,7 +8341,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &3839535857217753155 stripped
 Transform:
@@ -7968,6 +8364,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8030,7 +8427,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &3753530124449784252 stripped
 Transform:
@@ -8042,6 +8450,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8104,7 +8513,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &5076899616217239347 stripped
 Transform:
@@ -8116,6 +8536,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8178,7 +8599,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &3930476382602628565 stripped
 Transform:
@@ -8190,6 +8622,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8252,7 +8685,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &4139722060291552083 stripped
 Transform:
@@ -8264,6 +8708,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8326,7 +8771,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &4400874282533161964 stripped
 Transform:
@@ -8338,6 +8794,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8400,7 +8857,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &3745861785367282632 stripped
 Transform:
@@ -8412,6 +8880,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8474,7 +8943,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &4504187527885857782 stripped
 Transform:
@@ -8486,6 +8966,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8548,7 +9029,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &2587765949268222428 stripped
 Transform:
@@ -8560,6 +9052,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8622,7 +9115,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &2316485143998318816 stripped
 Transform:
@@ -8634,6 +9138,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8696,7 +9201,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &6105524995241785791 stripped
 Transform:
@@ -8708,6 +9224,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8770,7 +9287,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &2672787883472229832 stripped
 Transform:
@@ -8782,6 +9310,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8844,7 +9373,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &6761015562501542461 stripped
 Transform:
@@ -8856,6 +9396,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -8918,7 +9459,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &3300716163480609085 stripped
 Transform:
@@ -8930,6 +9482,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -8992,7 +9545,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &7334050622431581402 stripped
 Transform:
@@ -9004,6 +9568,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -9066,7 +9631,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &1442537581736418738 stripped
 Transform:
@@ -9078,6 +9654,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -9140,7 +9717,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &1835116693097636553 stripped
 Transform:
@@ -9152,6 +9740,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -9214,7 +9803,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &8142640501665065140 stripped
 Transform:
@@ -9226,6 +9826,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -9288,7 +9889,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &468451101916461320 stripped
 Transform:
@@ -9300,6 +9912,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -9362,7 +9975,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &8583769216410341495 stripped
 Transform:
@@ -9374,6 +9998,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 83661731758010340, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
@@ -9436,7 +10061,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_red_block_1&5m_free (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 748416993208218974, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e0957b98da84bc418bedfee5becb0b5, type: 3}
 --- !u!4 &9070483501956136572 stripped
 Transform:
@@ -9448,6 +10084,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8283882672406198086}
     m_Modifications:
     - target: {fileID: 8331497135148104607, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
@@ -9510,7 +10147,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Fence_line_type_01_white_block_1&5m_free (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
 --- !u!4 &869257635094471596 stripped
 Transform:

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Agava.YandexGames;
@@ -31,9 +30,6 @@ public class Leaderboard : MonoBehaviour
 
     private void SetPlayer() 
     {
-        //if (PlayerAccount.IsAuthorized == false)
-        //    return;
-
         Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName, _ => 
         {
             Agava.YandexGames.Leaderboard.SetScore(LeaderboardName, _playerScore);        
@@ -43,9 +39,6 @@ public class Leaderboard : MonoBehaviour
     private void Fill() 
     {
         _leaderboardPlayers.Clear();
-
-        //if (PlayerAccount.IsAuthorized == false)
-        //    return;
 
         Agava.YandexGames.Leaderboard.GetEntries(LeaderboardName, result =>
         {

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -30,7 +29,7 @@ public class ResultsMenuManager : MonoBehaviour
     private void LoadStartScreen() 
     {
         AdShower.Show();
-        SceneManager.LoadScene("StartGameMenu");
+        SceneManager.LoadScene(SceneNames.StartGameMenu);
     }
 
     private void ReloadLevel() 
@@ -47,12 +46,12 @@ public class ResultsMenuManager : MonoBehaviour
 
         if (PlayerAccount.IsAuthorized == false)
         {
-            ShowFailedAuthorizationWindow();
+            StartCoroutine(ShowFailedAuthorizationWindow());
             return;
         }
         else 
         {
-            PlayerAccount.RequestPersonalProfileDataPermission(); //а что если разрешение не предоставлено?       
+            PlayerAccount.RequestPersonalProfileDataPermission();      
             _leaderboard.gameObject.SetActive(true);
         }
     }

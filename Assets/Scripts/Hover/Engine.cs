@@ -1,34 +1,25 @@
-using DG.Tweening;
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
+[RequireComponent(typeof(IInputHandler))]
+[RequireComponent(typeof(SpeedBooster))]
 public class Engine : MonoBehaviour
 {
     [SerializeField] private Levitator _levitator;
     [SerializeField] private Mover _mover;
     [SerializeField] private DirectionChanger _directionChanger;
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private bool _isMovingForward = false;
-    [SerializeField] private float _speedBoostRate;
-    [SerializeField] private float _speedBoostTime;
+    [SerializeField] private VeichleShaker _veichleShaker;
+    [SerializeField] private AudioSource _audioSource;   
     [SerializeField] private float _speedLoseRate;
 
     private Transform _veichleTransform;
-    private List<Timer> _timers = new(); //если будет только один таймер, убрать список
-    private Timer _speedBoostTimer = new();
-    //private Timer _invincibilityTimer = new();
+    private SpeedBooster _speedBooster;
     private IInputHandler _inputHandler;
     private float _currentDirectionInput;
-    private float _previousYRotation;
-    private bool _isSpeedBoostActive;
+    private bool _isMovingForward = false;
 
-    private Vector3 _shakeAngles = new Vector3();
-    [SerializeField] private AnimationCurve _amplitudeCurve;
-    private float _shakeTimer = 1f;
-    [SerializeField] private float _duration;
-    [SerializeField] private float _amplitudeRange;
+    public Action SpeedNullified;
 
     private void Awake()
     {
@@ -36,38 +27,28 @@ public class Engine : MonoBehaviour
         _levitator.Initialize(_veichleTransform);
         _mover.Initialize(_veichleTransform);
         _directionChanger.Initialize(_veichleTransform);
+        _veichleShaker.Intialize(_veichleTransform);
         _inputHandler = GetComponent<IInputHandler>();
-        _previousYRotation = _veichleTransform.rotation.eulerAngles.y;
-        _timers.Add(_speedBoostTimer);
-        //_timers.Add(_invincibilityTimer);
+        _speedBooster = GetComponent<SpeedBooster>();
+        _speedBooster.Intialize(_mover);
     }
+
+    private void Start() =>
+        _levitator.StartLevitation();
 
     private void Update()
     {
-        foreach (Timer timer in _timers) 
-        {
-            if (timer.IsActive)
-                timer.Tick();
-        }
-        
-        _currentDirectionInput = _inputHandler.InquireInput(); //сделать так, чтобы код выполнялся только если  _isMovingForward
-
-        if (_currentDirectionInput != 0)  //попробовать объединить в одну связку со строками 63 и 64
-            _directionChanger.ChangeDirection(_currentDirectionInput);
-
         if (_isMovingForward) 
         {
-            //_levitator.StopLevitation();
-            _mover.PushForward();        
+            _currentDirectionInput = _inputHandler.InquireInput();
+
+            if (_currentDirectionInput != 0f) 
+                _directionChanger.ChangeDirection(_currentDirectionInput);
+            else
+                _directionChanger.ResetZRotation();
+
+            _mover.PushForward();
         }
-
-        if (_previousYRotation == _veichleTransform.rotation.eulerAngles.y) //попробовать заменить на  if (_currentDirectionInput == 0)
-            _directionChanger.ResetZRotation();
-    }
-
-    private void LateUpdate()
-    {
-        _previousYRotation = _veichleTransform.rotation.eulerAngles.y;
     }
 
     public void StartMovement() 
@@ -79,54 +60,28 @@ public class Engine : MonoBehaviour
             _audioSource.Play();
     }
 
-    public void ResetDirection(float correctionAngle) 
-    {
-        _directionChanger.ChangeDirection(correctionAngle);
-
-        //_veichleTransform.DORotate(new Vector3(_veichleTransform.rotation.eulerAngles.x, _veichleTransform.rotation.eulerAngles.y + correctionAngle,
-        //    _veichleTransform.rotation.eulerAngles.z), 0.2f);
-    }
-
-    public void ActivateSpeedBoost() 
-    {
-        if (_isSpeedBoostActive) 
-        { 
-            _speedBoostTimer.Start(_speedBoostTime);
-            return;
-        }
-
-        _isSpeedBoostActive = true;
-        _speedBoostTimer.Start(_speedBoostTime);
-        _speedBoostTimer.TimeIsUp += DeactivateSpeedBoost;
-        _mover.IncreaseMaxSpeed(_speedBoostRate);
-    }
-
-    private void DeactivateSpeedBoost() 
-    {
-        _isSpeedBoostActive = false;
-        _mover.ResetMaxSpeed();
-        _speedBoostTimer.TimeIsUp -= DeactivateSpeedBoost;
-    }
-
     public void ApplySpeedPenalty() 
     {
         _mover.DecreaseCurrentSpeed(_speedLoseRate);
-        //StartCoroutine(ShowHitEffect());
+        StartCoroutine(_veichleShaker.Shake());
     }
 
-    private IEnumerator ShowHitEffect() 
+    public void ApplySpeedBonus() =>
+        _speedBooster.ActivateSpeedBoost();
+
+    public IEnumerator GraduallyDecreaseSpeed() 
     {
-        _shakeTimer = 1f;
-        
-        while (_shakeTimer > 0f)
+        var waitTime = new WaitForSecondsRealtime(0.1f);
+        yield return waitTime;
+
+        while (_mover.CurrentSpeed > 2f) 
         {
-            _shakeTimer -= Time.deltaTime / _duration;
-            float currentOffset = Random.Range(-_amplitudeRange, _amplitudeRange);
-            _shakeAngles.x += currentOffset;
-            _shakeAngles.y += currentOffset;
-            _shakeAngles *= _amplitudeCurve.Evaluate(Mathf.Clamp01(1 - _shakeTimer));
-            _veichleTransform.position += _shakeAngles;
-            yield return null;
+            _mover.ChangeMaxSpeed(0.9f);
+            yield return waitTime;
         }
-    }
+
+        _mover.DecreaseCurrentSpeed(0f);
+        _isMovingForward = false;
+        SpeedNullified?.Invoke();
+    }   
 }

@@ -39,7 +39,7 @@ public class PauseMenuManager : MonoBehaviour
     private void LoadStartScreen() 
     {
         _confirmationWindow.YesButton.onClick.RemoveListener(LoadStartScreen);
-        SceneManager.LoadScene("StartGameMenu");
+        SceneManager.LoadScene(SceneNames.StartGameMenu);
     }
 
     private void ResumeGame() 
@@ -47,12 +47,6 @@ public class PauseMenuManager : MonoBehaviour
         _pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f;
     }
-
-    //private void OnApplicationFocus(bool focus)
-    //{
-    //    if (focus == false)
-    //        PauseGame();
-    //}
 
     public void PauseGame() 
     {

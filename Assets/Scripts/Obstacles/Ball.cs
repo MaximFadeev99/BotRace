@@ -2,17 +2,23 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(ConstantForce))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class Ball : Obstacle
 {
+    private readonly float _shrinkTime = 0.1f;
+    private readonly float _bounceBackTime = 0.3f;
+    
     private Transform _transform;
     private Rigidbody _rigidbody;
     private ConstantForce _constantForce;
     private AudioSource _audioSource;
     private Vector3 _pinnedDownScale = Vector3.one; 
-
-    public Action TouchedGround;
     private Vector3 _currentScale;
     private float _yVelocity;
+
+    public Action TouchedGround;
 
     private void Awake()
     {
@@ -26,16 +32,12 @@ public class Ball : Obstacle
     private void OnCollisionEnter()
     {
         TouchedGround?.Invoke();
-        _transform.DOScale(_pinnedDownScale, 0.1f);
+        _transform.DOScale(_pinnedDownScale, _shrinkTime);
         _audioSource.Play();
-        //_transform.localScale = _pinnedDownScale;
     }
 
-    private void OnCollisionExit()
-    {
-        _transform.DOScale(_currentScale, 0.3f);
-        //_transform.localScale = new Vector3 (0.8f, 0.8f, 0.8f);
-    }
+    private void OnCollisionExit() => 
+        _transform.DOScale(_currentScale, _bounceBackTime);
 
     public void Initiate(float newYVelocity, Vector3 newPinnedDownSclale) 
     {

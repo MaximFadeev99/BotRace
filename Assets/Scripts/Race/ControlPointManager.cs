@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ControlPointManager : MonoBehaviour
@@ -10,24 +8,18 @@ public class ControlPointManager : MonoBehaviour
 
     public Action<ControlPoint, BotDriver> ControlPointReached;
 
-    public void OnEnable()
-    {
+    private void OnEnable() =>
         ControlPointReached += OnControlPointReached;
-    }
 
-    public void OnDisable()
-    {
+    private void OnDisable() =>
         ControlPointReached -= OnControlPointReached;
-    }
 
-    public void OnControlPointReached(ControlPoint reachedControlPoint, BotDriver botDriver) 
+    private void OnControlPointReached(ControlPoint reachedControlPoint, BotDriver botDriver) 
     {
         int newPointIndex = _controlPoints.IndexOf(reachedControlPoint) + 1;
 
         if (newPointIndex > _controlPoints.Count - 1) 
-        {
             botDriver.SetControlPoint(reachedControlPoint);
-        }
 
         botDriver.SetControlPoint (_controlPoints[newPointIndex]);
     }

@@ -68,11 +68,14 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 8551548828504440714}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 4b1201f9eaed17f4f8af457830afbd38
+    name: HoverVolume
   m_AudioMixerGroupViews:
   - guids:
     - 0b6162b3957d9794c8a1148752185a3f
@@ -126,11 +129,13 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: Standard
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: cacd3b5340be198488559bbd70a861e8
   m_FloatValues:
+    bdfe4bb0a6c62d9409b918608c6f26e2: -9.73219
     416950a69fc33324dbaef516bdeb0cda: -10
+    4b1201f9eaed17f4f8af457830afbd38: -13.176849
   m_TransitionOverrides: {}
 --- !u!244 &5374962147721749093
 AudioMixerEffectController:
@@ -207,3 +212,18 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!245 &8551548828504440714
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mute
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 7ec9044dc02e4cc498c1b60bdde85224
+  m_FloatValues:
+    bdfe4bb0a6c62d9409b918608c6f26e2: -9.73219
+    416950a69fc33324dbaef516bdeb0cda: -10
+    e4ba2f47d996096468fdb395512efe11: -80
+    4b1201f9eaed17f4f8af457830afbd38: -13.176849
+  m_TransitionOverrides: {}

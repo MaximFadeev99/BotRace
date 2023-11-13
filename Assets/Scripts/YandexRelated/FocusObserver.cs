@@ -27,8 +27,6 @@ public class FocusObserver : MonoBehaviour
         AudioListener.volume = value ? 0f : 1f;
     }
 
-    private void PauseGame(bool value) 
-    {
+    private void PauseGame(bool value) =>
         Time.timeScale = value ? 0f : 1f;
-    }
 }

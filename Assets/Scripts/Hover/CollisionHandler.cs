@@ -1,25 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
 public class CollisionHandler
 {
-    private Hover _hover;
-    private Engine _engine;
-    private Transform _veichleTransform;
-    private IInputHandler _inputHandler;
-
-
-    //при столкновении справа с барьерм на объекте LeftTurn(1) ховер игрока выходит за карту, недостаточный разворот
+    private readonly Engine _engine;
+    private readonly Transform _veichleTransform;
+    private readonly InvincibilityHandler _invincibilityHandler;
+    private readonly IInputHandler _inputHandler;
 
     public CollisionHandler (Hover hover) 
     {
-        _hover = hover;
-        _veichleTransform = _hover.Transform;
-        _inputHandler = _hover.InputHandler;
-        _engine = _hover.Engine;
+        _veichleTransform = hover.Transform;
+        _inputHandler = hover.InputHandler;
+        _engine = hover.Engine;
+        _invincibilityHandler = hover.InvincibilityHandler;
     }
 
     public void AnalyzeCollision(Collider other) 
@@ -36,23 +30,20 @@ public class CollisionHandler
         }
         else if (other.TryGetComponent(out SpeedBonus _)) 
         {
-            _engine.ActivateSpeedBoost();
+            _engine.ApplySpeedBonus();
         }
         else if (other.TryGetComponent(out InvincibilityBonus _)) 
         {
-            _hover.ActivateInvincibility();
+            _invincibilityHandler.ActivateInvincibility();
         }
-        else if (other.TryGetComponent(out Obstacle _) && _hover.IsInvincible == false) 
+        else if (other.TryGetComponent(out Obstacle _) && _invincibilityHandler.IsInvincible == false) 
         {
-            _hover.PlayCollisionSound();
             _engine.ApplySpeedPenalty();
         }
     }
 
-    public void OnCollisionEnded()
-    {
+    public void OnCollisionEnded() =>
         _inputHandler.RemoveTurnBlocks();
-    }
 
     private void CorrectTrajectory(bool isCollidingOnRight)
     {
@@ -69,9 +60,9 @@ public class CollisionHandler
 
     private float CalculateCorrectionAngle(RaycastHit track, bool isCollidingOnRight) 
     {
-        float correctionAngle = 0;
-        Vector3 rotationAxis =  Vector3.zero;
         Transform trackTransform = track.transform;
+        Vector3 rotationAxis =  Vector3.zero;
+        float correctionAngle = 0;
 
         if (track.collider.TryGetComponent(out Straight _))
         {
@@ -79,11 +70,12 @@ public class CollisionHandler
         }
         else if (track.collider.TryGetComponent(out LeftTurn _))
         {
-            float slerpPorportion = 0.5f;
+            float slerpPorportion1 = 0.45f;
+            float slerpPorportion2 = 0.25f;
 
             if (isCollidingOnRight && track.point.z < trackTransform.position.z)
             {
-                rotationAxis = Vector3.Slerp(-trackTransform.right, trackTransform.forward, slerpPorportion);
+                rotationAxis = Vector3.Slerp(-trackTransform.right, trackTransform.forward, slerpPorportion2);
             }
             else if (isCollidingOnRight && track.point.z >= trackTransform.position.z)
             {
@@ -95,16 +87,15 @@ public class CollisionHandler
             }
             else if (isCollidingOnRight == false && track.point.z >= trackTransform.position.z)
             {
-                rotationAxis = Vector3.Slerp(-trackTransform.right, trackTransform.forward, slerpPorportion);
+                rotationAxis = Vector3.Slerp(-trackTransform.right, trackTransform.forward, slerpPorportion1);
             }
 
             correctionAngle = Vector3.SignedAngle(_veichleTransform.forward, rotationAxis, Vector3.up);
-            //Debug.Log(correctionAngle);
         }
         else if (track.collider.TryGetComponent(out RightTurn _))
         {
-            float slerpPorportion1 = 0.6f;
-            float slerpPorportion2 = 0.45f;
+            float slerpPorportion1 = 0.65f;
+            float slerpPorportion2 = 0.25f;
 
             if (isCollidingOnRight && track.point.z < trackTransform.position.z)
             {
