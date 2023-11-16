@@ -6,6 +6,7 @@ using Agava.YandexGames;
 
 public class ResultsMenuManager : MonoBehaviour
 {
+    [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private Button _replayButton;
     [SerializeField] private Button _showLeadersButton;
@@ -14,6 +15,7 @@ public class ResultsMenuManager : MonoBehaviour
 
     private void OnEnable()
     {
+        _pauseButton.interactable = false;
         _exitButton.onClick.AddListener(LoadStartScreen);
         _replayButton.onClick.AddListener(ReloadLevel);
         _showLeadersButton.onClick.AddListener(TryAuthorize);
@@ -47,7 +49,6 @@ public class ResultsMenuManager : MonoBehaviour
         if (PlayerAccount.IsAuthorized == false)
         {
             StartCoroutine(ShowFailedAuthorizationWindow());
-            return;
         }
         else 
         {

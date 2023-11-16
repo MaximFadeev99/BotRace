@@ -32,6 +32,7 @@ public class PauseMenuManager : MonoBehaviour
     private void ReloadScene() 
     {
         _confirmationWindow.YesButton.onClick.RemoveListener(ReloadScene);
+        AdShower.Show();
         Scene activeScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(activeScene.name);
     }
@@ -39,6 +40,7 @@ public class PauseMenuManager : MonoBehaviour
     private void LoadStartScreen() 
     {
         _confirmationWindow.YesButton.onClick.RemoveListener(LoadStartScreen);
+        AdShower.Show();
         SceneManager.LoadScene(SceneNames.StartGameMenu);
     }
 

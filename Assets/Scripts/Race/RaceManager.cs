@@ -6,7 +6,8 @@ using UnityEngine.Audio;
 public class RaceManager : MonoBehaviour
 {
     private const string HoverVolume = nameof(HoverVolume);
-    private const int MuteValue = -80;
+    private const int HoverMuteValue = -80;
+    private const int HoverUnmuteValue = -13;
     private const int ResultsColumnCount = 4;
     private const int PlaceColumn = 0;
     private const int NameColumn = 1;
@@ -42,8 +43,11 @@ public class RaceManager : MonoBehaviour
     private void OnDisable() =>
         _finishLine.Crossed -= OnFinishLineCrossed;
 
-    private void Start() =>
+    private void Start() 
+    {
+        _audioMixer.SetFloat(HoverVolume, HoverUnmuteValue);
         _countDownHandler.StartRace(_participants, _raceTimer);
+    }
 
     private void Update() =>
         _raceTimer.Tick();
@@ -72,8 +76,8 @@ public class RaceManager : MonoBehaviour
         _raceTimer.Deactivate();
         _resultsMenu.SetActive(true);
         _contentFiller.DrawResults(_results);
+        _audioMixer.SetFloat(HoverVolume, HoverMuteValue);
         Time.timeScale = 0f;
         player.Stopped -= FinishRace;
-        _audioMixer.SetFloat(HoverVolume, MuteValue);
     }   
 }

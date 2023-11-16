@@ -608,14 +608,14 @@ MonoBehaviour:
     _yRotationSpeed: 50
     _zRotationSpeed: 10
     _maxZRotation: 20
-  _hoverShaker:
+  _veichleShaker:
     _collisionAudioSource: {fileID: 0}
     _amplitudeCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.0047119763
-        value: 1.0028169
+        time: -0.012954712
+        value: 1.0065918
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -623,21 +623,20 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.0046966
-        value: 0.0009422302
-        inSlope: 0.12993184
-        outSlope: 0.12993184
+        time: 1.0011597
+        value: 0.0065994263
+        inSlope: 0.26994583
+        outSlope: 0.26994583
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.113976054
+        inWeight: 0.063994825
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    _duration: 0.4
+    _duration: 0.3
     _amplitudeRange: 0.2
   _audioSource: {fileID: 0}
-  _isMovingForward: 0
   _speedLoseRate: 0.3
 --- !u!114 &7624030634288030167
 MonoBehaviour:

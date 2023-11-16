@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 579853306}
   - component: {fileID: 579853307}
   - component: {fileID: 579853308}
-  m_Layer: 11
-  m_Name: CollidableZone
+  m_Layer: 9
+  m_Name: BallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579853305}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fde57d8c504c54648a10d75809be61cc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -48,7 +48,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -77,8 +77,8 @@ GameObject:
   - component: {fileID: 1572439783}
   - component: {fileID: 1572439784}
   - component: {fileID: 1572439785}
-  m_Layer: 11
-  m_Name: CollidableZone
+  m_Layer: 9
+  m_Name: BallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572439782}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fde57d8c504c54648a10d75809be61cc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -114,7 +114,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -151,8 +151,8 @@ GameObject:
   - component: {fileID: 1921454370}
   - component: {fileID: 1738392254}
   - component: {fileID: 117870748}
-  m_Layer: 9
-  m_Name: Ball1
+  m_Layer: 11
+  m_Name: CollidableZone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8686,7 +8686,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2844
+  m_VersionIndex: 2853
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8817,7 +8817,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027751940691049661}
-  m_Material: {fileID: 13400000, guid: fde57d8c504c54648a10d75809be61cc, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -8825,7 +8825,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -8961,7 +8961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6013854405291866189}
   - component: {fileID: 578682702494142988}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: JumpingBalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8978,7 +8978,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -111.1, y: 33.74237, z: 22.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1027751940691049606}
@@ -9020,8 +9020,8 @@ GameObject:
   - component: {fileID: 448505956}
   - component: {fileID: 448505947}
   - component: {fileID: 741426812}
-  m_Layer: 9
-  m_Name: Ball2
+  m_Layer: 11
+  m_Name: CollidableZone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17555,7 +17555,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2818
+  m_VersionIndex: 2827
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17686,7 +17686,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7993791591118998330}
-  m_Material: {fileID: 13400000, guid: fde57d8c504c54648a10d75809be61cc, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17694,7 +17694,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -7,7 +7,7 @@ using System;
 public class Leaderboard : MonoBehaviour
 {
     private const string AnonymousName = "Anonymous";
-    private const string LeaderboardName = "LeaderboardName";
+    private const string LeaderboardName = "BotRaceLB";
 
     [SerializeField] private LeaderboardView _leaderboardView;
 
@@ -19,7 +19,7 @@ public class Leaderboard : MonoBehaviour
     {
         if (PlayerAccount.IsAuthorized)
         {
-            SetPlayer();
+            TrySetPlayer();
             Fill();
         }
         else 
@@ -28,11 +28,12 @@ public class Leaderboard : MonoBehaviour
         }     
     }
 
-    private void SetPlayer() 
+    private void TrySetPlayer() 
     {
         Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName, _ => 
         {
-            Agava.YandexGames.Leaderboard.SetScore(LeaderboardName, _playerScore);        
+            if (_.score < _playerScore)
+                Agava.YandexGames.Leaderboard.SetScore(LeaderboardName, _playerScore);        
         });
     }
 
@@ -42,7 +43,7 @@ public class Leaderboard : MonoBehaviour
 
         Agava.YandexGames.Leaderboard.GetEntries(LeaderboardName, result =>
         {
-            for (var i = 0; i < result.entries.Length; i++) 
+            for (var i = 0; i < result.entries.Length; i++)
             {
                 int rank = result.entries[i].rank;
                 int score = result.entries[i].score;
@@ -51,11 +52,11 @@ public class Leaderboard : MonoBehaviour
                 if (string.IsNullOrEmpty(name))
                     name = AnonymousName;
 
-                _leaderboardPlayers.Add(new(rank, name, score));             
+                _leaderboardPlayers.Add(new(rank, name, score));
             }
 
             _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
-        });   
+        });
     }
 
     public void SetPlayerScore(string score) =>

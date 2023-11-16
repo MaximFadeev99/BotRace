@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48918641}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: ControllPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 898725355807898630}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -528,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8706790876931662117, guid: 34bca3fb2245bce409c0cdf9b8304696, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -700,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags

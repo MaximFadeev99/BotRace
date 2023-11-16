@@ -25,10 +25,10 @@ public class Hover : MonoBehaviour
     }
 
     private void OnEnable() =>
-        Engine.SpeedNullified += () => Stopped.Invoke(this);
+        Engine.SpeedNullified += () => Stopped?.Invoke(this);
 
     private void OnDisable() =>
-        Engine.SpeedNullified -= () => Stopped.Invoke(this);
+        Engine.SpeedNullified -= () => Stopped?.Invoke(this);
 
     private void OnTriggerEnter(Collider other) =>
         _collisionHandler.AnalyzeCollision(other);

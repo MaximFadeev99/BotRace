@@ -12,12 +12,12 @@ TagManager:
   - Water
   - UI
   - Hover
-  - Track
+  - CollidableTrack
   - Obstacle
   - JumpingBall
   - Bonus
   - CollidableObstacle
-  - 
+  - Fence
   - 
   - 
   - 

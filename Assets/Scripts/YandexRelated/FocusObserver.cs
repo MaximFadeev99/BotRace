@@ -5,13 +5,13 @@ public class FocusObserver : MonoBehaviour
 {
     private void OnEnable()
     {
-        Application.focusChanged += OnInBackgroundChange;
+        //Application.focusChanged += OnInBackgroundChange;
         WebApplication.InBackgroundChangeEvent += OnInBackgroundChange;
     }
 
     private void OnDisable()
     {
-        Application.focusChanged -= OnInBackgroundChange;
+        //Application.focusChanged -= OnInBackgroundChange;
         WebApplication.InBackgroundChangeEvent -= OnInBackgroundChange;
     }
 
@@ -27,6 +27,11 @@ public class FocusObserver : MonoBehaviour
         AudioListener.volume = value ? 0f : 1f;
     }
 
-    private void PauseGame(bool value) =>
+    private void PauseGame(bool value) 
+    {
+        if (Time.timeScale == 0f)
+            return;
+
         Time.timeScale = value ? 0f : 1f;
+    }
 }

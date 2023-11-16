@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4193443890045804470}
   - component: {fileID: 1713473536}
   - component: {fileID: 1713473535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Track_line_type_01_start_finish_15m_free
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8622976470740555410}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,6 +356,10 @@ PrefabInstance:
       value: Roadblock (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -436,6 +440,10 @@ PrefabInstance:
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_Name
       value: Roadblock (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1115685662857994159, guid: 6c59dc31ece73214eafb1af188f7b300, type: 3}
       propertyPath: m_StaticEditorFlags

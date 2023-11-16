@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.AI.Navigation.Editor.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.State.Editor", "Unity.VisualScripting.State.Editor.csproj", "{58E0E47D-44FB-EFF2-7A99-476A70290781}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{E74E3A17-599E-617C-3640-DA06063C959B}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agava.WebUtility.Tests", "Agava.WebUtility.Tests.csproj", "{0BFAF887-11BC-E509-3619-3CE30B03C37D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TestTools.CodeCoverage.Editor", "Unity.TestTools.CodeCoverage.Editor.csproj", "{762C81F0-9D66-1776-4C2B-B14D2B77A3F3}"
@@ -295,6 +297,10 @@ Global
 		{58E0E47D-44FB-EFF2-7A99-476A70290781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E0E47D-44FB-EFF2-7A99-476A70290781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E0E47D-44FB-EFF2-7A99-476A70290781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74E3A17-599E-617C-3640-DA06063C959B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74E3A17-599E-617C-3640-DA06063C959B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74E3A17-599E-617C-3640-DA06063C959B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74E3A17-599E-617C-3640-DA06063C959B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BFAF887-11BC-E509-3619-3CE30B03C37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BFAF887-11BC-E509-3619-3CE30B03C37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BFAF887-11BC-E509-3619-3CE30B03C37D}.Release|Any CPU.ActiveCfg = Release|Any CPU

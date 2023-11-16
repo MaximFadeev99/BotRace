@@ -6,7 +6,7 @@ public class BotDriver
     private readonly ControlPointManager _controlPointManager;
     private readonly Renderer _renderer;
     private readonly Transform _boxcastPoint;
-    private readonly LayerMask _layerMask = 2560;
+    private readonly LayerMask _layerMask = 2048;
     private readonly float _inputLerpRate = 0.2f;
     private readonly float _raycastDistance = 150f;
     private readonly float _dotResultThreshold = 0.995f;

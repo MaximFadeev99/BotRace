@@ -86,6 +86,8 @@
     <Compile Include="Assets\Scripts\Track\LeftTurn.cs" />
     <Compile Include="Assets\Scripts\UI\Results\ContentFiller.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\ILevitator.cs" />
+    <Compile Include="Assets\TestLoc.cs" />
+    <Compile Include="Assets\MeshCombiner\Scripts\MeshCombiner.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverPoint.cs" />
     <Compile Include="Assets\Scripts\Track\RightTrackBarrier.cs" />
     <Compile Include="Assets\Scripts\UI\Results\ResultsMenuManager.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Assets\Scripts\UI\Results\ResultLine.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\BasicController.cs" />
     <Compile Include="Assets\Scripts\Track\LeftTrackBarrier.cs" />
+    <Compile Include="Assets\Scripts\Utilities\AvailableLanguages.cs" />
     <Compile Include="Assets\Scripts\Hover\DirectionChanger.cs" />
     <Compile Include="Assets\Scripts\UI\StartScreenUI\MainMenuManager.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverLook.cs" />
@@ -125,6 +128,7 @@
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverGrid.cs" />
     <Compile Include="Assets\Scripts\Race\ControlPointManager.cs" />
     <Compile Include="Assets\Scripts\UI\TurnButtons\LeftTurnButton.cs" />
+    <Compile Include="Assets\Scripts\UI\StartScreenUI\SettingMenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -145,6 +149,7 @@
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\GUI Kit Casual Game\ResourcesData\Shader &amp; Materials\MobileAdditive.shader" />
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\GUI Kit Casual Game\Extensions\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
