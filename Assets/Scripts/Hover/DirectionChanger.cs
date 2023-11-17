@@ -11,9 +11,9 @@ public class DirectionChanger : IDirectionChanger
     private float _currentZRotation = 0;
     private float _previousYRotation = 0;
 
-    public void Initialize(Transform veichleTransform)
+    public void Initialize(Transform vehicleTransform)
     {
-        _transform = veichleTransform; 
+        _transform = vehicleTransform; 
         _currentZRotation = _transform.rotation.eulerAngles.z;
     }
 

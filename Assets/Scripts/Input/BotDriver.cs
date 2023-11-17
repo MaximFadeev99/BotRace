@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BotDriver 
 {
-    private readonly Transform _veichleTransform;
+    private readonly Transform _vehicleTransform;
     private readonly ControlPointManager _controlPointManager;
     private readonly Renderer _renderer;
     private readonly Transform _boxcastPoint;
@@ -24,9 +24,9 @@ public class BotDriver
     private float _currentInput;
     private float _maneuverSide;
 
-    public BotDriver(Transform veichleTransform, Renderer renderer, ControlPointManager controlPointManager, Transform raycastPoint)
+    public BotDriver(Transform vehicleTransform, Renderer renderer, ControlPointManager controlPointManager, Transform raycastPoint)
     {
-        _veichleTransform = veichleTransform;
+        _vehicleTransform = vehicleTransform;
         _renderer = renderer;
         _controlPointManager = controlPointManager;
         _boxcastPoint = raycastPoint;
@@ -39,8 +39,8 @@ public class BotDriver
     {
         if (_isManeuvering == false) 
         {
-            _boxcastDirection = _veichleTransform.forward;
-            _boxcastOrientation = _veichleTransform.rotation;
+            _boxcastDirection = _vehicleTransform.forward;
+            _boxcastOrientation = _vehicleTransform.rotation;
         }
 
         bool isObstacleSpotted = Physics.BoxCast(_boxcastPoint.position, _boxcastSize, _boxcastDirection, 
@@ -68,11 +68,11 @@ public class BotDriver
             return CalculateGradualInput(_maneuverSide);
         }
       
-        if (Vector3.Dot(_veichleTransform.forward, _controlPointTransform.forward) 
+        if (Vector3.Dot(_vehicleTransform.forward, _controlPointTransform.forward) 
             < _dotResultThreshold && _isManeuvering == false) 
         {          
             _correctionAngle = Vector3.SignedAngle
-                (_veichleTransform.forward, _controlPointTransform.forward, Vector3.up);
+                (_vehicleTransform.forward, _controlPointTransform.forward, Vector3.up);
             return CalculateGradualInput(_correctionAngle);
         }
 

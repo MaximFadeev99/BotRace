@@ -10,10 +10,8 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button _exitButton;
     [SerializeField] private SettingMenuManager _settingsMenu;
 
-    private void Awake()
-    {
-        //YandexGamesSdk.GameReady();
-    }
+    private void Awake() =>
+        YandexGamesSdk.GameReady();
 
     private void OnEnable()
     {

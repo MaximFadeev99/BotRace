@@ -5,14 +5,21 @@ public class FocusObserver : MonoBehaviour
 {
     private void OnEnable()
     {
-        //Application.focusChanged += OnInBackgroundChange;
+        //Application.focusChanged += OnFocusChanged; //два способа изменения звука и остановки времени выполянются последовательно,
+                                                        //в результате звук и время всегда на нуля
         WebApplication.InBackgroundChangeEvent += OnInBackgroundChange;
     }
 
     private void OnDisable()
     {
-        //Application.focusChanged -= OnInBackgroundChange;
+        //Application.focusChanged -= OnFocusChanged;
         WebApplication.InBackgroundChangeEvent -= OnInBackgroundChange;
+    }
+
+    private void OnFocusChanged(bool isInBackground) 
+    {
+        MuteAudio(isInBackground);
+        PauseGame(isInBackground);
     }
 
     private void OnInBackgroundChange(bool isInBackground) 
@@ -21,17 +28,12 @@ public class FocusObserver : MonoBehaviour
         PauseGame(isInBackground);
     }
 
-    private void MuteAudio(bool value) 
+    private void MuteAudio(bool isMuting) 
     {
-        AudioListener.pause = value;
-        AudioListener.volume = value ? 0f : 1f;
+        AudioListener.pause = isMuting;
+        AudioListener.volume = isMuting ? 0f : 1f;
     }
 
-    private void PauseGame(bool value) 
-    {
-        if (Time.timeScale == 0f)
-            return;
-
-        Time.timeScale = value ? 0f : 1f;
-    }
+    private void PauseGame(bool isPausing) =>
+        Time.timeScale = isPausing ? 0f : 1f;
 }

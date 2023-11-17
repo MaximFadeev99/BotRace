@@ -12,6 +12,6 @@ internal class UserInputHandler: InputHandler
         else if (_leftTurnButton.CurrentValue != 0f)
             return _leftTurnButton.CurrentValue;
         else 
-            return Input.GetAxis("Horizontal") * 1f;
+            return Input.GetAxis("Horizontal");    
     }
 }

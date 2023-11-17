@@ -67,6 +67,8 @@ namespace Lean.Localization
 		/// <summary>Called when the language or translations change.</summary>
 		public static event System.Action OnLocalizationChanged;
 
+		public static event System.Action<string> OnLanguageChanged; //customly added 
+
 		private static bool pendingUpdates;
 
 		private static Dictionary<string, LeanTranslation> tempTranslations = new Dictionary<string, LeanTranslation>();
@@ -181,6 +183,8 @@ namespace Lean.Localization
 		/// <summary>This sets the current language of all instances using the specified language name.</summary>
 		public static void SetCurrentLanguageAll(string newLanguage)
 		{
+			OnLanguageChanged?.Invoke(newLanguage);
+
 			foreach (var instance in Instances)
 			{
 				instance.CurrentLanguage = newLanguage;

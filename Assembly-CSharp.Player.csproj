@@ -86,7 +86,6 @@
     <Compile Include="Assets\Scripts\Track\LeftTurn.cs" />
     <Compile Include="Assets\Scripts\UI\Results\ContentFiller.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EngineRelated\ILevitator.cs" />
-    <Compile Include="Assets\TestLoc.cs" />
     <Compile Include="Assets\MeshCombiner\Scripts\MeshCombiner.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverPoint.cs" />
     <Compile Include="Assets\Scripts\Track\RightTrackBarrier.cs" />
@@ -126,6 +125,7 @@
     <Compile Include="Assets\Scripts\UI\PauseMenu\PauseMenuManager.cs" />
     <Compile Include="Assets\Scripts\Obstacles\JumpingBalls.cs" />
     <Compile Include="Assets\EZ Hover Studios\EZ Hover\Scripts\HoverGrid.cs" />
+    <Compile Include="Assets\Scripts\Utilities\LeanLocalizedGameObjectName.cs" />
     <Compile Include="Assets\Scripts\Race\ControlPointManager.cs" />
     <Compile Include="Assets\Scripts\UI\TurnButtons\LeftTurnButton.cs" />
     <Compile Include="Assets\Scripts\UI\StartScreenUI\SettingMenuManager.cs" />

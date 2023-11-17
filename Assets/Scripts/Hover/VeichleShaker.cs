@@ -2,14 +2,14 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public class VeichleShaker
+public class vehicleShaker
 {
     [SerializeField] private AudioSource _collisionAudioSource;
     [SerializeField] private AnimationCurve _amplitudeCurve;
     [SerializeField] private float _duration;
     [SerializeField] private float _amplitudeRange;
 
-    private Transform _veichleTransform;
+    private Transform _vehicleTransform;
     private Vector3 _shakeAngles = new();
     private float _shakeTimer;
 
@@ -19,8 +19,8 @@ public class VeichleShaker
             _collisionAudioSource.Play();
     }
 
-    public void Intialize(Transform veichleTransform) => 
-        _veichleTransform = veichleTransform;
+    public void Intialize(Transform vehicleTransform) => 
+        _vehicleTransform = vehicleTransform;
 
     public IEnumerator Shake()
     {
@@ -34,7 +34,7 @@ public class VeichleShaker
             _shakeAngles.x += currentOffset;
             _shakeAngles.y += currentOffset;
             _shakeAngles *= _amplitudeCurve.Evaluate(Mathf.Clamp01(1 - _shakeTimer));
-            _veichleTransform.position += _shakeAngles;
+            _vehicleTransform.position += _shakeAngles;
             yield return null;
         }
     }

@@ -34,8 +34,11 @@ public class Hover : MonoBehaviour
         _collisionHandler.AnalyzeCollision(other);
 
     private void OnTriggerExit(Collider other) =>
-        _collisionHandler.OnCollisionEnded();
-   
+        _collisionHandler.OnCollisionEnded(other);
+
+    private void OnTriggerStay(Collider other) =>
+        _collisionHandler.OnCollisionStay(other);
+
     public void StartRacing() =>
         Engine.StartMovement();
 

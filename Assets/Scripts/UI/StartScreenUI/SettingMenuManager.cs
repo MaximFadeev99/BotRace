@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class SettingMenuManager : MonoBehaviour
 {
-    private const string StandardSnapshotName = "Standard";
-    private const string MuteSnapshotName = "Mute";
+    private const string MasterVolume = nameof(MasterVolume);
+    private const int MuteValue = -80;
+    private const int UnmuteValue = 0;
 
     [SerializeField] private Toggle _english;
     [SerializeField] private Toggle _russian;
@@ -18,22 +19,14 @@ public class SettingMenuManager : MonoBehaviour
     [SerializeField] private List<Sprite> _soundSprites;
     [SerializeField] private Button _closeButton;
 
-    private AudioMixerSnapshot _muteSnapshot;
-    private AudioMixerSnapshot _standardSnapshot;
     private bool _isSoundMute;
 
     public Action<bool> Closed; 
 
-    private void Awake()
-    {
-        _standardSnapshot = _audioMixer.FindSnapshot(StandardSnapshotName);
-        _muteSnapshot = _audioMixer.FindSnapshot(MuteSnapshotName);
-    }
-
     private void OnEnable() =>
-        SelectLanguageButton();
+        SelectLanguageToggle();
 
-    private void SelectLanguageButton() 
+    private void SelectLanguageToggle() 
     {
         string currentLanguage = LeanLocalization.GetFirstCurrentLanguage();
         Toggle targetToggle = currentLanguage switch
@@ -49,19 +42,17 @@ public class SettingMenuManager : MonoBehaviour
 
     public void MuteVolume()
     {
-        float transitionTime = 0.2f;
-
         if (_isSoundMute)
         {
-            _standardSnapshot.TransitionTo(transitionTime);
+            _audioMixer.SetFloat(MasterVolume, UnmuteValue);
             _soundImage.sprite = _soundSprites[1];
-            _isSoundMute = false;
+            _isSoundMute = !_isSoundMute;
         }
         else
         {
-            _muteSnapshot.TransitionTo(transitionTime);
+            _audioMixer.SetFloat(MasterVolume, MuteValue);
             _soundImage.sprite = _soundSprites[0];
-            _isSoundMute = true;
+            _isSoundMute = !_isSoundMute;
         }
     }
 

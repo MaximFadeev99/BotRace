@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IDirectionChanger
 {
-    public void Initialize(Transform veichleTransform);
+    public void Initialize(Transform vehicleTransform);
 
     public void ChangeDirection(float newYRotation);
 

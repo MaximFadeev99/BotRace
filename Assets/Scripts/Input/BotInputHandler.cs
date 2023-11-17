@@ -6,16 +6,16 @@ public class BotInputHandler : InputHandler
     [SerializeField] private ControlPointManager _controlPointManager;
     [SerializeField] private Transform _raycastPoint;
 
-    private Transform _veichleTransform;   
+    private Transform _vehicleTransform;   
     private Renderer _renderer;
 
     public BotDriver BotDriver { get; private set; }
 
     private void Awake()
     {
-        _veichleTransform = transform;
+        _vehicleTransform = transform;
         _renderer = GetComponent<Renderer>();
-        BotDriver = new(_veichleTransform, _renderer, _controlPointManager, _raycastPoint);
+        BotDriver = new(_vehicleTransform, _renderer, _controlPointManager, _raycastPoint);
     }
 
     protected override float GetInput()

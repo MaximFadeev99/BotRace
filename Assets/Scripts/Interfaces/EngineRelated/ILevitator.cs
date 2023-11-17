@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface ILevitator
 {
-    public void Initialize(Transform veichleTransform);
+    public void Initialize(Transform vehicleTransform);
 
     public void StartLevitation();
 

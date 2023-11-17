@@ -9,11 +9,11 @@ public class Engine : MonoBehaviour
     [SerializeField] private Levitator _levitator;
     [SerializeField] private Mover _mover;
     [SerializeField] private DirectionChanger _directionChanger;
-    [SerializeField] private VeichleShaker _veichleShaker;
+    [SerializeField] private vehicleShaker _vehicleShaker;
     [SerializeField] private AudioSource _audioSource;   
     [SerializeField] private float _speedLoseRate;
 
-    private Transform _veichleTransform;
+    private Transform _vehicleTransform;
     private SpeedBooster _speedBooster;
     private IInputHandler _inputHandler;
     private float _currentDirectionInput;
@@ -23,11 +23,11 @@ public class Engine : MonoBehaviour
 
     private void Awake()
     {
-        _veichleTransform = transform;
-        _levitator.Initialize(_veichleTransform);
-        _mover.Initialize(_veichleTransform);
-        _directionChanger.Initialize(_veichleTransform);
-        _veichleShaker.Intialize(_veichleTransform);
+        _vehicleTransform = transform;
+        _levitator.Initialize(_vehicleTransform);
+        _mover.Initialize(_vehicleTransform);
+        _directionChanger.Initialize(_vehicleTransform);
+        _vehicleShaker.Intialize(_vehicleTransform);
         _inputHandler = GetComponent<IInputHandler>();
         _speedBooster = GetComponent<SpeedBooster>();
         _speedBooster.Intialize(_mover);
@@ -63,7 +63,7 @@ public class Engine : MonoBehaviour
     public void ApplySpeedPenalty() 
     {
         _mover.DecreaseCurrentSpeed(_speedLoseRate);
-        StartCoroutine(_veichleShaker.Shake());
+        StartCoroutine(_vehicleShaker.Shake());
     }
 
     public void ApplySpeedBonus() =>

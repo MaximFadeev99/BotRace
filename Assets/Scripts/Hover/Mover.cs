@@ -22,9 +22,9 @@ public class Mover : IMover
             _transform.rotation.eulerAngles.y, _transform.rotation.eulerAngles.z);
     }
 
-    public void Initialize(Transform veichleTransform)
+    public void Initialize(Transform vehicleTransform)
     {
-        _transform = veichleTransform;
+        _transform = vehicleTransform;
         _initialYPosition = _transform.position.y;
         _initialMaxSpeed = _maxSpeed;
     }

@@ -12,24 +12,20 @@ public abstract class InputHandler : MonoBehaviour, IInputHandler
     {
         _directionInput = GetInput();
 
-        if (_isRightTurnBlock)
+        if (_isRightTurnBlock) 
             _directionInput = Mathf.Clamp(_directionInput, -1f, 0f);
 
         if (_isLeftTurnBlock)
-            _directionInput = Mathf.Clamp01(_directionInput);
+            _directionInput = Mathf.Clamp(_directionInput, 0f, 1f);
 
         return _directionInput;
     }
 
-    public void BlockLeftTurn()
-    {
+    public void BlockLeftTurn() =>
         _isLeftTurnBlock = true;
-    }
 
-    public void BlockRightTurn()
-    {
+    public void BlockRightTurn() =>
         _isRightTurnBlock = true;
-    }
 
     public void RemoveTurnBlocks()
     {

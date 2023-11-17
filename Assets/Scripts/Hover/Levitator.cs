@@ -8,16 +8,16 @@ public class Levitator : ILevitator
     [SerializeField] private float _upDownLevitationRange;
     [SerializeField] private float _upDownLevitationTime;
 
-    private Transform _veichleTransform;
+    private Transform _vehicleTransform;
     private Tween _idleLevitationTween;
 
-    public void Initialize(Transform veichleTransform)
+    public void Initialize(Transform vehicleTransform)
     {
-        _veichleTransform = veichleTransform;
-        _veichleTransform.position = new Vector3
-            (_veichleTransform.position.x, _initialAltitutde, _veichleTransform.position.z);
-        _idleLevitationTween = _veichleTransform.DOMoveY
-            (_veichleTransform.position.y - _upDownLevitationRange, _upDownLevitationTime).SetLoops(-1, LoopType.Yoyo);
+        _vehicleTransform = vehicleTransform;
+        _vehicleTransform.position = new Vector3
+            (_vehicleTransform.position.x, _initialAltitutde, _vehicleTransform.position.z);
+        _idleLevitationTween = _vehicleTransform.DOMoveY
+            (_vehicleTransform.position.y - _upDownLevitationRange, _upDownLevitationTime).SetLoops(-1, LoopType.Yoyo);
         _idleLevitationTween.SetEase(Ease.Linear).Pause();
     }
 

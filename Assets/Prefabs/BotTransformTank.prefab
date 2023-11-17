@@ -456,6 +456,8 @@ GameObject:
   - component: {fileID: 6621626747488636890}
   - component: {fileID: 654117357297444219}
   - component: {fileID: 3549565483636517071}
+  - component: {fileID: 3257596310978782786}
+  - component: {fileID: 6753199085604361485}
   m_Layer: 6
   m_Name: BotTransformTank
   m_TagString: Untagged
@@ -693,6 +695,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _invincibilityEffect: {fileID: 6197212794706384633}
   _invincibilityTime: 5
+--- !u!114 &3257596310978782786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675934887627632140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Schumacher
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0428\u0443\u043C\u0430\u0445\u0435\u0440"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: Schumacher
+    Object: {fileID: 0}
+--- !u!114 &6753199085604361485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675934887627632140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe922a75041fa914d8e5ec3bcefa4ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leanLocalization: {fileID: 0}
 --- !u!1 &4688757217953657115
 GameObject:
   m_ObjectHideFlags: 0
