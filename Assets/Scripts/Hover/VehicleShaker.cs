@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public class vehicleShaker
+public class VehicleShaker
 {
     [SerializeField] private AudioSource _collisionAudioSource;
     [SerializeField] private AnimationCurve _amplitudeCurve;

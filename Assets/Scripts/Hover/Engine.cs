@@ -9,7 +9,7 @@ public class Engine : MonoBehaviour
     [SerializeField] private Levitator _levitator;
     [SerializeField] private Mover _mover;
     [SerializeField] private DirectionChanger _directionChanger;
-    [SerializeField] private vehicleShaker _vehicleShaker;
+    [SerializeField] private VehicleShaker _vehicleShaker;
     [SerializeField] private AudioSource _audioSource;   
     [SerializeField] private float _speedLoseRate;
 
