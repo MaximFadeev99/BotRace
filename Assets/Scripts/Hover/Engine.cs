@@ -40,6 +40,7 @@ public class Engine : MonoBehaviour
     {
         if (_isMovingForward) 
         {
+            _levitator.VerifyAltitude();
             _currentDirectionInput = _inputHandler.InquireInput();
 
             if (_currentDirectionInput != 0f) 
@@ -54,6 +55,10 @@ public class Engine : MonoBehaviour
     public void StartMovement() 
     {
         _levitator.StopLevitation();
+
+        if (_levitator.IsAltitudeCorrectionRequired)
+            StartCoroutine(_levitator.CorrectAltitude());
+
         _isMovingForward = true;
 
         if (_audioSource != null)
@@ -81,6 +86,7 @@ public class Engine : MonoBehaviour
         }
 
         _mover.DecreaseCurrentSpeed(0f);
+        _levitator.TurnOffAltitudeCorrection();
         _isMovingForward = false;
         SpeedNullified?.Invoke();
     }   

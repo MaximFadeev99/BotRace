@@ -1,36 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using Agava.YandexGames;
 
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Button _playButton;
     [SerializeField] private Button _settingsButton;
-    [SerializeField] private Button _exitButton;
+    [SerializeField] private Button _tutorialButton;
     [SerializeField] private SettingMenuManager _settingsMenu;
+    [SerializeField] private TutorialPanel _tutorialPanel;
+    [SerializeField] private LevelSelectionMenu _levelSelectionMenu;
 
-    private void Awake() =>
+    private void Awake() 
+    {
         YandexGamesSdk.GameReady();
+        SaveSystem.Load();
+    }
 
     private void OnEnable()
     {
         _settingsMenu.Closed += SetButtonsActive;
-        _playButton.onClick.AddListener(LoadGame);
+        _levelSelectionMenu.Closed += SetButtonsActive;
+        _tutorialPanel.Closed += SetButtonsActive;
+        _playButton.onClick.AddListener(ShowLevelSelectionMenu);
         _settingsButton.onClick.AddListener(ShowSettingsMenu);
-        _exitButton.onClick.AddListener(ExitGame);   
+        _tutorialButton.onClick.AddListener(ShowTutorialPanel);
     }
 
     private void OnDisable()
     {
         _settingsMenu.Closed -= SetButtonsActive;
-        _playButton.onClick.RemoveListener(LoadGame);
+        _levelSelectionMenu.Closed -= SetButtonsActive;
+        _tutorialPanel.Closed -= SetButtonsActive;
+        _playButton.onClick.RemoveListener(ShowLevelSelectionMenu);
         _settingsButton.onClick.RemoveListener(ShowSettingsMenu);
-        _playButton.onClick.RemoveListener(ExitGame);
+        _tutorialButton.onClick.RemoveListener(ShowTutorialPanel);
     }
 
-    private void LoadGame() =>
-        SceneManager.LoadScene(SceneNames.Level1);
+    private void ShowLevelSelectionMenu() 
+    {
+        SaveSystem.Load();
+        _levelSelectionMenu.gameObject.SetActive(!_levelSelectionMenu.gameObject.activeSelf);
+        SetButtonsActive(false);
+    }
 
     private void ShowSettingsMenu() 
     {
@@ -38,13 +50,16 @@ public class MainMenuManager : MonoBehaviour
         SetButtonsActive(false); 
     }
 
+    private void ShowTutorialPanel() 
+    {
+        _tutorialPanel.gameObject.SetActive(!_tutorialPanel.gameObject.activeSelf);
+        SetButtonsActive(false);  
+    }
+
     private void SetButtonsActive(bool isActive) 
     {
         _playButton.interactable = isActive;
         _settingsButton.interactable = isActive;
-        _exitButton.interactable = isActive;
+        _tutorialButton.interactable = isActive;
     }
-
-    private void ExitGame() =>
-        Application.Quit();
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class DirectionChanger : IDirectionChanger
+public class DirectionChanger
 {
     [SerializeField] private float _yRotationSpeed;
     [SerializeField] private float _zRotationSpeed;

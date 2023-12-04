@@ -12,6 +12,7 @@ public class ResultsMenuManager : MonoBehaviour
     [SerializeField] private Button _showLeadersButton;
     [SerializeField] private GameObject _failedAuthorizationWindow;
     [SerializeField] private Leaderboard _leaderboard;
+    [SerializeField] private GameObject _authorizationWarning;
 
     private void OnEnable()
     {
@@ -19,6 +20,7 @@ public class ResultsMenuManager : MonoBehaviour
         _exitButton.onClick.AddListener(LoadStartScreen);
         _replayButton.onClick.AddListener(ReloadLevel);
         _showLeadersButton.onClick.AddListener(TryAuthorize);
+        StartCoroutine(ShowPanel(_authorizationWarning, 10f));
     }
 
     private void OnDisable()
@@ -48,7 +50,7 @@ public class ResultsMenuManager : MonoBehaviour
 
         if (PlayerAccount.IsAuthorized == false)
         {
-            StartCoroutine(ShowFailedAuthorizationWindow());
+            StartCoroutine(ShowPanel(_failedAuthorizationWindow, 3f));
         }
         else 
         {
@@ -57,11 +59,11 @@ public class ResultsMenuManager : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowFailedAuthorizationWindow() 
+    private IEnumerator ShowPanel(GameObject panel, float showTime) 
     {
-        var waitTime = new WaitForSeconds(3f);
-        _failedAuthorizationWindow.SetActive(true);
+        var waitTime = new WaitForSecondsRealtime(showTime);
+        panel.SetActive(true);
         yield return waitTime;
-        _failedAuthorizationWindow.SetActive(false);
+        panel.SetActive(false);
     }
 }

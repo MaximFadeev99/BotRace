@@ -19,7 +19,10 @@ public class ControlPointManager : MonoBehaviour
         int newPointIndex = _controlPoints.IndexOf(reachedControlPoint) + 1;
 
         if (newPointIndex > _controlPoints.Count - 1) 
+        {       
             botDriver.SetControlPoint(reachedControlPoint);
+            return;
+        } 
 
         botDriver.SetControlPoint (_controlPoints[newPointIndex]);
     }
@@ -28,4 +31,7 @@ public class ControlPointManager : MonoBehaviour
     {
         return _controlPoints[0];
     }
+
+    public void Initialize(List<ControlPoint> controlPoints) =>
+        _controlPoints = controlPoints;
 }

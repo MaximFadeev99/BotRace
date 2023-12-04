@@ -19,6 +19,7 @@ namespace Source.Yandex
         private void OnInitialized() 
         {
             ChangeLanguage();
+            SaveSystem.Load();
             SceneManager.LoadScene(SceneNames.StartGameMenu);       
         }
 
@@ -30,10 +31,11 @@ namespace Source.Yandex
                 AvailableLanguages.RussianCode => AvailableLanguages.Russian,
                 AvailableLanguages.EnglishCode => AvailableLanguages.English,
                 AvailableLanguages.TurkishCode => AvailableLanguages.Turkish,
-                _ => AvailableLanguages.English
+                _ => AvailableLanguages.Russian
             };
 
-            LeanLocalization.SetCurrentLanguageAll(usedLanguage);      
+            LeanLocalization.SetCurrentLanguageAll(usedLanguage);
+            Debug.Log(YandexGamesSdk.Environment.i18n.lang + " " +  usedLanguage);
         }
     }
 }

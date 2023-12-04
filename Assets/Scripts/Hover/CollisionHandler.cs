@@ -18,7 +18,7 @@ public class CollisionHandler
     
     private void CorrectTrajectory(bool isCollidingOnRight)
     {
-        float raycastDistance = 5f;
+        float raycastDistance = 10f; //5f
         float correctionDuration = 0.2f;
         float correctionAngle;
 

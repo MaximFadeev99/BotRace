@@ -6,8 +6,11 @@ public class ScoreCalculator
     private readonly float _placeCorrectionRate = 0.1f;
     private readonly float _averageTime;
 
-    public ScoreCalculator(float trackAverageTime)=>
+    public ScoreCalculator(float trackAverageTime, int trackLengthLevel, int trackDifficultyLevel) 
+    {
         _averageTime = trackAverageTime;
+        _basicScore = _basicScore * trackLengthLevel + _basicScore * trackDifficultyLevel;   
+    }
     
     public float CalculateScore(float actualTime, int place) 
     {

@@ -34,7 +34,8 @@ public class SettingMenuManager : MonoBehaviour
             AvailableLanguages.English => _english,
             AvailableLanguages.Russian => _russian,
             AvailableLanguages.Turkish => _turkish,
-            _ => throw new NotImplementedException("The language currently set by LeanLocalization is not implemented"),
+            _ => throw new NotImplementedException
+            ("The language currently set by LeanLocalization is not implemented"),
         };
 
         targetToggle.isOn = true;     

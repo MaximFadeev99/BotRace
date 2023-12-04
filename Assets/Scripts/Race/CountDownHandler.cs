@@ -1,3 +1,4 @@
+using Lean.Localization;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,7 @@ using UnityEngine;
 public class CountDownHandler : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _countDownField;
+    [SerializeField] private TextMeshProUGUI _goPhrase;
     [SerializeField] private AudioClip _beep;
     [SerializeField] private AudioClip _finalBeep;
     [SerializeField] private float _countDownSpeed;
@@ -19,7 +21,6 @@ public class CountDownHandler : MonoBehaviour
     private IEnumerator StartCountDown(List<Hover> participants, RaceTimer raceTimer)
     {
         var waitTime = new WaitForSeconds(_countDownSpeed);
-        Time.timeScale = 1f;
         yield return waitTime;
         _countDownField.text = "3";
         _audioSource.clip = _beep;
@@ -32,7 +33,8 @@ public class CountDownHandler : MonoBehaviour
         _countDownField.text = "1";
         _audioSource.Play();
         yield return waitTime;
-        _countDownField.text = "GO!";
+        _countDownField.gameObject.SetActive(false);
+        _goPhrase.gameObject.SetActive(true);
         _audioSource.clip = _finalBeep;
         _audioSource.Play();
 
@@ -41,7 +43,7 @@ public class CountDownHandler : MonoBehaviour
 
         raceTimer.Activate();
         yield return waitTime;
-        _countDownField.gameObject.SetActive(false);
+        _goPhrase.gameObject.SetActive(false);
     }
 
     public void StartRace(List<Hover> participants, RaceTimer raceTimer) => 

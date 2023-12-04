@@ -10,18 +10,18 @@ public class PauseMenuManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _pauseButton.onClick.AddListener(OnPauseButtonClicked);
+        _pauseButton.onClick.AddListener(OnPauseButtonClick);
         _confirmationWindow.NoButton.onClick.AddListener(() =>
         { _confirmationWindow.gameObject.SetActive(false); });
     }
 
     private void OnDisable()
     {
-        _pauseButton.onClick.RemoveListener(OnPauseButtonClicked);
+        _pauseButton.onClick.RemoveListener(OnPauseButtonClick);
         _confirmationWindow.NoButton.onClick.RemoveAllListeners();
     }
 
-    private void OnPauseButtonClicked() 
+    private void OnPauseButtonClick() 
     {
         if (_pauseMenuPanel.activeSelf == false)
             PauseGame();
@@ -47,13 +47,14 @@ public class PauseMenuManager : MonoBehaviour
     private void ResumeGame() 
     {
         _pauseMenuPanel.SetActive(false);
-        Time.timeScale = 1f;
+        GameStopper.ResetManualPause();
+        GameStopper.TryUnpauseGame();
     }
 
     public void PauseGame() 
     {
         _pauseMenuPanel.SetActive(true);
-        Time.timeScale = 0f;
+        GameStopper.PauseGame();
     }
 
     public void InquireReloadConfirmation()

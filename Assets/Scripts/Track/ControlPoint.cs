@@ -9,4 +9,7 @@ public class ControlPoint : MonoBehaviour
         if (other.TryGetComponent(out BotInputHandler botInputHandler)) 
             _controlPointManager.ControlPointReached?.Invoke(this, botInputHandler.BotDriver);
     }
+
+    public void SetControlPointManager(ControlPointManager controlPointManager) =>
+        _controlPointManager = controlPointManager;
 }
