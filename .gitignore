@@ -5,8 +5,5 @@ Promo/
 Temp/
 UserSettings/
 .vsconfig
-Agava.WebUtility.Player
-Agava.WebUtility.Tests
-Agava.WebUtility.Tests.Player
-Agava.YandexGames
-Agava.YandexGames.Player
+*.csproj
+Death Race.sln
